@@ -1,5 +1,5 @@
-# FRC-Power-Up
-This repository contains the code used by Team 5557 (BB-R8ERS) during FRC Power Up.
+# FRC-Power-Up-Scrimmage
+This repository contains the code used by Team 5557 (BB-R8ERS) during FRC Power Up Scrimmage.
 
 ## Repository Guidelines
 - Maintain code cleanliness - the IDE has an organize code function for a reason

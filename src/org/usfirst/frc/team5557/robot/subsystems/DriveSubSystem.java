@@ -1,6 +1,5 @@
 package org.usfirst.frc.team5557.robot.subsystems;
 import org.usfirst.frc.team5557.robot.OI;
-import org.usfirst.frc.team5557.robot.Robot;
 import org.usfirst.frc.team5557.robot.RobotMap;
 import org.usfirst.frc.team5557.robot.commands.ManualDriveCommand;
 
@@ -8,9 +7,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.SensorCollection;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
-import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
-import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.drive.RobotDriveBase.MotorType;
@@ -34,6 +31,7 @@ public class DriveSubSystem extends Subsystem{
 	
 	private ControllerSubsystem control = ControllerSubsystem.getInstance();
 	
+	//
 	private WPI_TalonSRX leftFrontTal = new WPI_TalonSRX(RobotMap.LEFT_FRONT_MOTOR);
 	private WPI_TalonSRX leftRearTal = new WPI_TalonSRX(RobotMap.LEFT_REAR_MOTOR);
 	private WPI_TalonSRX rightFrontTal = new WPI_TalonSRX(RobotMap.RIGHT_FRONT_MOTOR);
@@ -44,6 +42,7 @@ public class DriveSubSystem extends Subsystem{
 	DifferentialDrive difDrive = new DifferentialDrive(leftGroup, rightGroup);
 	
 	public double left, right;
+	
 	int layoutInt;
 
 	public static DriveSubSystem getInstance() {
