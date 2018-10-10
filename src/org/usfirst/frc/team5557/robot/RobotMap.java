@@ -50,6 +50,10 @@ public class RobotMap {
 		public static final int INTAKE_MOTOR_LEFT = 8;
 		public static final int INTAKE_MOTOR_RIGHT = 9;
 		
+		// Linar Actuator motor
+		
+		public static final int LINEAR_ACTUATOR_PORT = 11; // TODO: CHANGE UP WHEN WE KNOW PORT
+		
 		// Constants for encoders connected to Talon SRX
 		public static final float PEAK_OUTPUT_VOLTAGE = 10f;
 		public static final float NOMINAL_OUTPUT_VOLTAGE = 0f;

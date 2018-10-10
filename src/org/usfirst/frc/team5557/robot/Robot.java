@@ -22,17 +22,7 @@ import res.RightAutoLineCubeMotionProfile;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 import org.usfirst.frc.team5557.robot.commands.SwapDriveComand;
-import org.usfirst.frc.team5557.robot.commands.autogroups.LeftAutoLine;
-import org.usfirst.frc.team5557.robot.commands.autogroups.LeftRightSwitch;
-import org.usfirst.frc.team5557.robot.commands.autogroups.LeftSwitch;
-import org.usfirst.frc.team5557.robot.commands.autogroups.MiddleAutoLine;
-import org.usfirst.frc.team5557.robot.commands.autogroups.AutoLine;
-import org.usfirst.frc.team5557.robot.commands.autogroups.MiddleLeftSwitch;
-import org.usfirst.frc.team5557.robot.commands.autogroups.MiddleRightSwitch;
-import org.usfirst.frc.team5557.robot.commands.autogroups.SwitchOnSameSide;
-import org.usfirst.frc.team5557.robot.commands.autogroups.RightAutoLineTalon;
-import org.usfirst.frc.team5557.robot.commands.autogroups.RightLeftSwitch;
-import org.usfirst.frc.team5557.robot.commands.autogroups.RightSwitch;
+import org.usfirst.frc.team5557.robot.commands.autogroups.ExampleAutonomous;
 import org.usfirst.frc.team5557.robot.subsystems.ArmSubsystem;
 import org.usfirst.frc.team5557.robot.subsystems.ControllerSubsystem;
 import org.usfirst.frc.team5557.robot.subsystems.DriveSubSystem;
@@ -187,23 +177,23 @@ public class Robot extends IterativeRobot {
 				if(autonObjectiveChooser.getSelected().intValue() == 0){ //autoline
 					if(gameData.charAt(0) == 'R'){
 						System.out.println("Caught FMS data Right");
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					} else if(gameData.charAt(0) == 'L'){
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					}
 				}else if(autonObjectiveChooser.getSelected().intValue() == 1){ //switch
 					if(gameData.charAt(0) == 'R'){
 						System.out.println("Caught FMS data Right");
-						autonomousCommand = new SwitchOnSameSide();
+						autonomousCommand = new ExampleAutonomous();
 					} else if(gameData.charAt(0) == 'L'){
-						autonomousCommand = new SwitchOnSameSide();
+						autonomousCommand = new ExampleAutonomous();
 					}
 				}else if(autonObjectiveChooser.getSelected().intValue() == 2){ //scale
 					if(gameData.charAt(0) == 'R'){
 						System.out.println("Caught FMS data Right");
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					} else if(gameData.charAt(0) == 'L'){
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					}
 				}
 			}
@@ -212,23 +202,23 @@ public class Robot extends IterativeRobot {
 				if(autonObjectiveChooser.getSelected().intValue() == 0){ //autoline
 					if(gameData.charAt(0) == 'R'){
 						System.out.println("Caught FMS data Right");
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					} else if(gameData.charAt(0) == 'L'){
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					}
 				}else if(autonObjectiveChooser.getSelected().intValue() == 1){ //switch
 					if(gameData.charAt(0) == 'R'){
 						System.out.println("Caught FMS data Right");
-						autonomousCommand = new SwitchOnSameSide();
+						autonomousCommand = new ExampleAutonomous();
 					} else if(gameData.charAt(0) == 'L'){
-						autonomousCommand = new SwitchOnSameSide();
+						autonomousCommand = new ExampleAutonomous();
 					}
 				}else if(autonObjectiveChooser.getSelected().intValue() == 2){ //scale
 					if(gameData.charAt(0) == 'R'){
 						System.out.println("Caught FMS data Right");
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					} else if(gameData.charAt(0) == 'L'){
-						autonomousCommand = new AutoLine();
+						autonomousCommand = new ExampleAutonomous();
 					}
 				}
 			}
@@ -237,23 +227,23 @@ public class Robot extends IterativeRobot {
 					if(autonObjectiveChooser.getSelected().intValue() == 0){ //autoline
 						if(gameData.charAt(0) == 'R'){
 							System.out.println("Caught FMS data Right");
-							autonomousCommand = new AutoLine();
+							autonomousCommand = new ExampleAutonomous();
 						} else if(gameData.charAt(0) == 'L'){
-							autonomousCommand = new AutoLine();
+							autonomousCommand = new ExampleAutonomous();
 						}
 					}else if(autonObjectiveChooser.getSelected().intValue() == 1){ //switch
 						if(gameData.charAt(0) == 'R'){
 							System.out.println("Caught FMS data Right");
-							autonomousCommand = new SwitchOnSameSide();
+							autonomousCommand = new ExampleAutonomous();
 						} else if(gameData.charAt(0) == 'L'){
-							autonomousCommand = new SwitchOnSameSide();
+							autonomousCommand = new ExampleAutonomous();
 						}
 					}else if(autonObjectiveChooser.getSelected().intValue() == 2){ //scale
 						if(gameData.charAt(0) == 'R'){
 							System.out.println("Caught FMS data Right");
-							autonomousCommand = new AutoLine();
+							autonomousCommand = new ExampleAutonomous();
 						} else if(gameData.charAt(0) == 'L'){
-							autonomousCommand = new AutoLine();
+							autonomousCommand = new ExampleAutonomous();
 						}
 					}
 				}
