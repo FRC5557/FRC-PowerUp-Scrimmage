@@ -16,8 +16,6 @@ public class RetractWristCommand extends Command {
 	@Override
 	protected void execute() {
 		arm.retract();
-		
-	
 	} 
 	
 	@Override
