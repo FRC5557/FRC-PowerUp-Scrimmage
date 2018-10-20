@@ -4,15 +4,11 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-import org.usfirst.frc.team5557.robot.commands.DanceCommand;
 import org.usfirst.frc.team5557.robot.commands.ExpellCommand;
-import org.usfirst.frc.team5557.robot.commands.ExtendWristCommand;
+import org.usfirst.frc.team5557.robot.commands.ExtendLinearActuatorCommand;
 import org.usfirst.frc.team5557.robot.commands.IntakeCommand;
-import org.usfirst.frc.team5557.robot.commands.RaiseArmCommand;
-import org.usfirst.frc.team5557.robot.commands.RetractWristCommand;
-import org.usfirst.frc.team5557.robot.commands.SoftEStopCommand;
+import org.usfirst.frc.team5557.robot.commands.RetractLinearActuatorCommand;
 //import org.usfirst.frc.team5557.robot.commands.SonicDriveCommand;
-import org.usfirst.frc.team5557.robot.commands.SwapDriveComand;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -22,28 +18,23 @@ public class OI {
 	
 	// Joysticks defined here
 	public static final Joystick driveStickZero = new Joystick(RobotMap.JOYSTICK_DRIVE_ONE);
-	public static final Joystick driveStickOne = new Joystick(RobotMap.JOYSTICK_DRIVE_ONE);
 
 	// Buttons defined here
-	//public final Button raiseArmButton = new JoystickButton(driveStickZero, RobotMap.RAISE_ARM_BUTTON);
-	public final Button extendWristButton = new JoystickButton(driveStickZero, RobotMap.EXTEND_WRIST_BUTTON);
-	public final Button retractWristButton = new JoystickButton(driveStickZero, RobotMap.RETRACT_WRIST_BUTTON);
-	public final Button intakeButtonLeft = new JoystickButton(driveStickZero, RobotMap.INTAKE_BUTTON_LEFT);
-	public final Button intakeButtonRight = new JoystickButton(driveStickZero, RobotMap.INTAKE_BUTTON_RIGHT);
-	public final Button expellButtonLeft = new JoystickButton(driveStickZero, RobotMap.EXPELL_BUTTON_LEFT);
-	public final Button expellButtonRight = new JoystickButton(driveStickZero, RobotMap.EXPELL_BUTTON_RIGHT);
+	public final Button intakeButton = new JoystickButton(driveStickZero, RobotMap.INTAKE_BUTTON);
+	public final Button expellButton = new JoystickButton(driveStickZero, RobotMap.EXPELL_BUTTON);
 	public final Button swapControllerButton = new JoystickButton(driveStickZero, RobotMap.SWAP_CONTROLLER_BUTTON);
+	public final Button extendLinearAcutatorButton = new JoystickButton(driveStickZero, RobotMap.EXTEND_LINEAR_ACTUATOR_BUTTON);
+	public final Button retractLinearAcutatorButton = new JoystickButton(driveStickZero, RobotMap.RETRACT_LINEAR_ACTUATOR_BUTTON);
+
 	
 	public OI() {
-		//raiseArmButton.whileHeld(new RaiseAjrmCommand());
-		extendWristButton.whileHeld(new ExtendWristCommand());
-		retractWristButton.whileHeld(new RetractWristCommand());
-		intakeButtonLeft.whileHeld(new IntakeCommand(8));
-		intakeButtonRight.whileHeld(new IntakeCommand(9));
-		expellButtonLeft.whileHeld(new ExpellCommand(8));
-		expellButtonRight.whileHeld(new ExpellCommand(9));
 		
-		//swapControllerButton.whenPressed(new SwapDriveComand("CONTROLLER"));
+		extendLinearAcutatorButton.whileHeld(new ExtendLinearActuatorCommand());
+		retractLinearAcutatorButton.whileHeld(new RetractLinearActuatorCommand());
+		intakeButton.whileHeld(new IntakeCommand(7));
+		expellButton.whileHeld(new ExpellCommand(7));
+		
+//		swapControllerButtontton.whenPressed(new SwapDriveComand("CONTROLLER"));
 	}
 
 	

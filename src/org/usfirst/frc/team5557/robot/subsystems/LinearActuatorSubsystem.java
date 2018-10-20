@@ -1,7 +1,6 @@
 package org.usfirst.frc.team5557.robot.subsystems;
 
 import org.usfirst.frc.team5557.robot.RobotMap;
-import org.usfirst.frc.team5557.robot.commands.ManualDriveCommand;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
@@ -14,15 +13,15 @@ public class LinearActuatorSubsystem extends Subsystem {
 	
 	private ControllerSubsystem control = ControllerSubsystem.getInstance();
 	
-	private WPI_TalonSRX linearActuator = new WPI_TalonSRX(RobotMap.LINEAR_ACTUATOR_PORT);
+	private WPI_TalonSRX linearActuator = new WPI_TalonSRX(RobotMap.LINEAR_ACTUATOR);
 	
-	public static double motorSpeed = .1;
+	public static double motorSpeed = 1;
 
 
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
-		setDefaultCommand(new ManualDriveCommand());
+//		setDefaultCommand(new ManualDriveCommand());
 		control.setController(1);
 	}
 	

@@ -4,15 +4,12 @@ package org.usfirst.frc.team5557.robot;
 import edu.wpi.cscore.CvSink;
 import edu.wpi.cscore.CvSource;
 import edu.wpi.cscore.UsbCamera;
-import edu.wpi.cscore.VideoMode;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Preferences;
-import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.drive.RobotDriveBase.MotorType;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.CommandGroup;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -21,21 +18,15 @@ import res.RightAutoLineCubeMotionProfile;
 
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
-import org.usfirst.frc.team5557.robot.commands.SwapDriveComand;
 import org.usfirst.frc.team5557.robot.commands.autogroups.ExampleAutonomous;
 import org.usfirst.frc.team5557.robot.subsystems.ArmSubsystem;
-import org.usfirst.frc.team5557.robot.subsystems.ControllerSubsystem;
 import org.usfirst.frc.team5557.robot.subsystems.DriveSubSystem;
 import org.usfirst.frc.team5557.robot.subsystems.MotionProfileSubsystem;
 import org.usfirst.frc.team5557.robot.subsystems.SensorSubsystem;
 
 import com.ctre.phoenix.motion.SetValueMotionProfile;
 import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import utils.ADIS16448_IMU;
 
@@ -51,7 +42,6 @@ public class Robot extends IterativeRobot {
 	private static final DriveSubSystem drive = DriveSubSystem.getInstance();
 	private static final SensorSubsystem sensors = SensorSubsystem.getInstance();
 	private static final ArmSubsystem arm = ArmSubsystem.getInstance();
-	private static final ControllerSubsystem control = ControllerSubsystem.getInstance();
 	
 
 	public static final MotionProfileSubsystem mp = new MotionProfileSubsystem(new RightAutoLineCubeMotionProfile());
@@ -287,12 +277,12 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		arm.raise(OI.driveStickZero.getZ());
-		arm.wrist.set(arm.wristPower);
 	}
 
 	/**
 	 * This function is called periodically during test mode
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();

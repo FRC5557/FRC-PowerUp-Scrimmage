@@ -1,7 +1,5 @@
 package org.usfirst.frc.team5557.robot.commands;
 
-import org.usfirst.frc.team5557.robot.OI;
-import org.usfirst.frc.team5557.robot.Robot;
 import org.usfirst.frc.team5557.robot.subsystems.ControllerSubsystem;
 
 import edu.wpi.first.wpilibj.command.Command;

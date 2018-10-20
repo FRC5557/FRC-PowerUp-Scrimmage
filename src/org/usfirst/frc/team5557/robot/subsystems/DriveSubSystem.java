@@ -94,7 +94,7 @@ public class DriveSubSystem extends Subsystem{
 		double turn = 0;
 		double throttle = 0;
 		//Controller Drive
-		turn = OI.driveStickZero.getX() > 0 ? OI.driveStickZero.getX()*1 : OI.driveStickOne.getX()*1;
+		turn = OI.driveStickZero.getX() > 0 ? OI.driveStickZero.getX()*1 : OI.driveStickZero.getX()*1;
 		throttle = control.getTrigerThrottle(OI.driveStickZero.getTwist(), OI.driveStickZero.getThrottle());
 		difDrive.arcadeDrive(throttle,turn);
 	}

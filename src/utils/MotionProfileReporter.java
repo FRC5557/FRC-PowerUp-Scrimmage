@@ -41,6 +41,7 @@ public class MotionProfileReporter {
 		System.out.format("%s\n", "NOPROGRESS");
 	}
 
+	@SuppressWarnings("unused")
 	static private String StrOutputEnable(SetValueMotionProfile sv) {
 		/* convert sv to string equiv */
 		if (sv == null)

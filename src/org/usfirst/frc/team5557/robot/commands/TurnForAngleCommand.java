@@ -1,13 +1,9 @@
 package org.usfirst.frc.team5557.robot.commands;
 
-import org.usfirst.frc.team5557.robot.Robot;
-import org.usfirst.frc.team5557.robot.RobotMap;
 import org.usfirst.frc.team5557.robot.subsystems.DriveSubSystem;
 import org.usfirst.frc.team5557.robot.subsystems.SensorSubsystem;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.drive.RobotDriveBase.MotorType;
 
 //
 //Basic autonomous turning using Encoders

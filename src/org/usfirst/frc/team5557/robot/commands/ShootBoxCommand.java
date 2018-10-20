@@ -1,12 +1,9 @@
 package org.usfirst.frc.team5557.robot.commands;
 
-import org.usfirst.frc.team5557.robot.Robot;
 import org.usfirst.frc.team5557.robot.RobotMap;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import org.usfirst.frc.team5557.robot.subsystems.ArmSubsystem;
 
-import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class ShootBoxCommand extends Command{
@@ -19,13 +16,12 @@ public class ShootBoxCommand extends Command{
 	
 	@Override
 	protected void initialize() {
-		requires(arm);
+//		requires(arm);
 	}
 
 	@Override
 	protected void execute() {
 		arm.shoot(RobotMap.INTAKE_MOTOR_LEFT);
-		arm.shoot(RobotMap.INTAKE_MOTOR_RIGHT);
 		
 	} 
 	
