@@ -20,7 +20,7 @@ public class ExampleAutonomous extends CommandGroup {
 		
 		// addParallel will run both of these commands at the same time
 		addParallel(new DriveForDistanceCommand(104));
-		addParallel(new ExpellCommand(104));
+		addParallel(new ExpellCommand());
 
 	}
 	

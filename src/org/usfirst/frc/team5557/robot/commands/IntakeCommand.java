@@ -9,10 +9,9 @@ public class IntakeCommand extends Command{
 
 	private ArmSubsystem arm = ArmSubsystem.getInstance();
 	
-	int motor;
+	int motor = RobotMap.INTAKE_MOTOR_LEFT;
 	
-	public IntakeCommand(int motor) {
-		this.motor = motor;
+	public IntakeCommand() {
 	}
 	
 	@Override

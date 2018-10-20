@@ -13,6 +13,7 @@ import org.usfirst.frc.team5557.robot.commands.RetractLinearActuatorCommand;
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
+ * it uses the robotmap and commands to create buttons that run their respective commands
  */
 public class OI {
 	
@@ -31,8 +32,8 @@ public class OI {
 		
 		extendLinearAcutatorButton.whileHeld(new ExtendLinearActuatorCommand());
 		retractLinearAcutatorButton.whileHeld(new RetractLinearActuatorCommand());
-		intakeButton.whileHeld(new IntakeCommand(7));
-		expellButton.whileHeld(new ExpellCommand(7));
+		intakeButton.whileHeld(new IntakeCommand());
+		expellButton.whileHeld(new ExpellCommand());
 		
 //		swapControllerButtontton.whenPressed(new SwapDriveComand("CONTROLLER"));
 	}

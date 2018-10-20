@@ -1,5 +1,6 @@
 package org.usfirst.frc.team5557.robot.commands;
 
+import org.usfirst.frc.team5557.robot.RobotMap;
 import org.usfirst.frc.team5557.robot.subsystems.ArmSubsystem;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -8,10 +9,9 @@ public class ExpellCommand extends Command {
 
 	private ArmSubsystem arm = ArmSubsystem.getInstance();
 	
-	int motor;
+	int motor = RobotMap.INTAKE_MOTOR_LEFT;
 	
-	public ExpellCommand(int motor) {
-		this.motor = motor;
+	public ExpellCommand() {
 	}
 	
 	@Override
